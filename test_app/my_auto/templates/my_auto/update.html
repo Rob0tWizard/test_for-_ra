@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Получить каталог</title>
+</head>
+<body>
+    <h1>Обновить каталог</h1>
+
+    <form method="post" action="{% url 'update_catalog' %}">
+        {% csrf_token %}
+        <input type="submit" value="Обновить каталог">
+    </form>
+
+    <form method="post" action="{% url 'home' %}">
+        {% csrf_token %}
+        <input type="submit" value="Домой">
+    </form>
+</body>
+</html>
